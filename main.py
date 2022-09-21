@@ -1,14 +1,16 @@
 from openpyxl import Workbook
 
-import csv
-
-filename = "sample.csv"
-name_sheet = "phone book"
 exel_file = Workbook()
-exel_sheet = exel_file.create_sheet(name_sheet)
-
-with open(filename) as data:
-    for line in csv.reader(data):
-        if line:
-            exel_sheet.append(line)
+exel_sheet = exel_file.create_sheet(title="CC 200+")
+exel_sheet["A1"] = 1
+exel_sheet["A2"] = "dssds"
+exel_sheet["A3"] = "dfdfs"
+exel_sheet["A4"] = "sdjnsv"
+exel_sheet.cell(row=5, column=5).value = "sdsdf sdfsdf"
+CC = (
+    ("sdfsdf", "sdfsfsd"),
+    ("afdsf", "asaffdssdf")
+)
+for row in CC:
+    exel_sheet.append(row)
 exel_file.save(filename="qwer.xlsx")
