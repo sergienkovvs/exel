@@ -2,7 +2,6 @@ from openpyxl import Workbook
 
 import csv
 
-
 filename = "sample.csv"
 name_sheet = "phone book"
 exel_file = Workbook()
